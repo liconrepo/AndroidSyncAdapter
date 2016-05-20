@@ -1,4 +1,4 @@
-package com.licon.syncadapter;
+package com.licon.syncadaptertest;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

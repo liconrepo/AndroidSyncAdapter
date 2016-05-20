@@ -1,6 +1,40 @@
 <resources>
-    <string name="app_name">My Applicationqq</string>
+    <string name="app_name">Sync Adapter Sample</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <!-- authentication buttons -->
+    <string name="button_add_acc">Add Account</string>
+    <string name="button_get_auth_token">Get authentication token</string>
+    <string name="button_get_auth_token_feature">Get authentication token by feature</string>
+    <string name="button_invalidate_token">Invalidate token</string>
+
+    <string name="signup_title">Create new account</string>
+    <string name="login_label">Log in</string>
+    <string name="settings_label">Own Sync Adapter</string>
+
+    <!-- sign up / sign in -->
+    <string name="text_name">Name</string>
+    <string name="text_email">Email address</string>
+    <string name="text_password">Password</string>
+    <string name="text_new_user">New user? Click here to sign up.</string>
+    <string name="text_already_user">Already a member?</string>
+    <string name="button_signin">Sign in</string>
+    <string name="button_signup">Sign up</string>
+
+    <!-- sync adapter content provider -->
+    <string name="provider_name">TV Shows</string>
+
+    <!-- sync adapter main action buttons -->
+    <string name="button_show_local_list">Show local list</string>
+    <string name="button_add_tv_show">Add TV show to local</string>
+    <string name="button_clear_local_list">Clear local List</string>
+    <string name="button_connect">Connect</string>
+    <string name="button_show_remote_list">Show remote List</string>
+    <string name="button_sync_now">Sync now</string>
+    <string name="text_status_unknown">Status: Unknown</string>
+    <string name="text_is_syncable">IsSyncable</string>
+    <string name="text_auto_sync">Auto sync</string>
+
 </resources>
