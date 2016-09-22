@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<account-authenticator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:accountPreferences="@xml/prefs"
+    android:accountType="com.licon.syncadaptertest"
+    android:icon="@drawable/ic_loyalty_black_normal"
+    android:label="@string/settings_label"
+    android:smallIcon="@drawable/ic_loyalty_black_small" />
