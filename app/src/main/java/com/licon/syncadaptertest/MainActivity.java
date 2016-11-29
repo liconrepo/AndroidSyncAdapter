@@ -232,9 +232,9 @@ public class MainActivity extends Activity {
         String status;
 
         if (ContentResolver.isSyncActive(mConnectedAccount, TvShowsContract.AUTHORITY))
-            status = "Status: Syncing..";
+            status = "Status: Syncing...";
         else if (ContentResolver.isSyncPending(mConnectedAccount, TvShowsContract.AUTHORITY))
-            status = "Status: Pending..";
+            status = "Status: Pending...";
         else
             status = "Status: Idle";
 
