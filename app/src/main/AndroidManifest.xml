@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.licon.syncadaptertest" >
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- client -->
-    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
 
     <!-- Authenticator -->
@@ -12,22 +11,18 @@
     <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
 
     <!-- Sync Adapter -->
-    <uses-permission
-        android:name="android.permission.READ_SYNC_STATS" />
-    <uses-permission
-        android:name="android.permission.READ_SYNC_SETTINGS" />
-    <uses-permission
-        android:name="android.permission.WRITE_SYNC_SETTINGS" />
-
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_loyalty_black_normal"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
-            android:name="com.licon.syncadaptertest.MainActivity"
-            android:label="@string/app_name" >
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,19 +34,21 @@
         Introducing our Content Provider.
         W/O that, we'll get: "Failed to find provider info for com.licon.sync.tvshows.provider" -->
         <provider android:authorities="com.licon.sync.tvshows.provider"
-            android:name="com.licon.syncadaptertest.db.TvShowsContentProvider"
+            android:name=".db.TvShowsContentProvider"
             android:label="@string/provider_name"
             android:exported="false"/>
 
         <!-- Authenticator related activities and service needs
         to be declared here in order for the app to recognize them-->
-        <activity android:name="com.licon.syncadaptertest.authentication.SignInAuthenticatorActivity"
+        <activity android:name=".authentication.SignInAuthenticatorActivity"
             android:label="@string/login_label"/>
-        <activity android:name="com.licon.syncadaptertest.authentication.SignUpActivity"
+        <activity android:name=".authentication.SignUpActivity"
             android:label="@string/signup_title"/>
 
         <!-- Authenticator related service -->
-        <service android:name="com.licon.syncadaptertest.authentication.LiconAuthenticatorService">
+        <service
+            android:name=".authentication.LiconAuthenticatorService"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />
             </intent-filter>
@@ -61,7 +58,7 @@
 
         <!-- Sync adapter related service -->
         <service
-            android:name="com.licon.syncadaptertest.syncadapter.TvShowsSyncService"
+            android:name=".syncadapter.TvShowsSyncService"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.content.SyncAdapter" />
