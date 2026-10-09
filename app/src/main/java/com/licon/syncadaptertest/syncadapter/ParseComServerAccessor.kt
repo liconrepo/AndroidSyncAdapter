@@ -4,7 +4,7 @@ import android.util.Log
 import com.google.gson.Gson
 import com.licon.syncadaptertest.LOG_TAG
 import com.licon.syncadaptertest.authentication.ParseComServer
-import com.licon.syncadaptertest.authentication.ParseComServer.Companion.toException
+import com.licon.syncadaptertest.authentication.ParseComServer.toException
 import com.licon.syncadaptertest.db.dao.TvShow
 import org.json.JSONObject
 import java.net.HttpURLConnection

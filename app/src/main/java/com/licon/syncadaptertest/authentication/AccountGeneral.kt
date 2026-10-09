@@ -15,5 +15,5 @@ object AccountGeneral {
     const val AUTHTOKEN_TYPE_FULL_ACCESS = "Full access"
     const val AUTHTOKEN_TYPE_FULL_ACCESS_LABEL = "Full access to an licon-sync account"
 
-    val serverAuthenticate: ServerAuthenticate = ParseComServer()
+    val serverAuthenticate: ServerAuthenticate = DemoServerAuthenticate()
 }

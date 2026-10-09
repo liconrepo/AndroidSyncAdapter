@@ -17,7 +17,9 @@
     <!-- sync adapter content provider -->
     <string name="provider_name">TV Shows</string>
 
-    <!-- sync adapter main action buttons -->
+    <!-- sync adapter main screen -->
+    <string name="section_local">Local TV shows</string>
+    <string name="section_account">Account &amp; sync</string>
     <string name="button_show_local_list">Show local list</string>
     <string name="button_add_tv_show">Add TV show to local</string>
     <string name="button_clear_local_list">Clear local List</string>

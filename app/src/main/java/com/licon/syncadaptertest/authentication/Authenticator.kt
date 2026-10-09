@@ -10,8 +10,8 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
 
-/** Account authenticator of the Licon account type. */
-class LiconAuthenticator(private val context: Context) : AbstractAccountAuthenticator(context) {
+/** Account authenticator of the account type. */
+class Authenticator(private val context: Context) : AbstractAccountAuthenticator(context) {
 
     override fun addAccount(
         response: AccountAuthenticatorResponse,
@@ -106,6 +106,6 @@ class LiconAuthenticator(private val context: Context) : AbstractAccountAuthenti
         .putExtra(SignInAuthenticatorActivity.ARG_AUTH_TYPE, authTokenType)
 
     private companion object {
-        const val TAG = "LiconAuthenticator"
+        const val TAG = "Authenticator"
     }
 }

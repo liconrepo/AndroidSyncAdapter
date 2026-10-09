@@ -47,7 +47,7 @@
 
         <!-- Authenticator related service -->
         <service
-            android:name=".authentication.LiconAuthenticatorService"
+            android:name=".authentication.AuthenticatorService"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.accounts.AccountAuthenticator" />

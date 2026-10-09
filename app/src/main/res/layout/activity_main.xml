@@ -1,93 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="@dimen/dp_16">
 
-        <Button
-            android:id="@+id/btnShowLocalList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/dp_10"
-            android:text="@string/button_show_local_list" />
+        <LinearLayout style="@style/Card">
 
-        <Button
-            android:id="@+id/btnAddShow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/dp_10"
-            android:text="@string/button_add_tv_show" />
+            <TextView
+                style="@style/SectionTitle"
+                android:text="@string/section_local" />
 
-        <Button
-            android:id="@+id/btnClearLocalData"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/dp_10"
-            android:text="@string/button_clear_local_list" />
+            <Button
+                android:id="@+id/btnAddShow"
+                style="@style/ActionButton"
+                android:text="@string/button_add_tv_show" />
 
-        <Button
-            android:id="@+id/btnConnect"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_20"
-            android:padding="@dimen/dp_10"
-            android:text="@string/button_connect" />
+            <Button
+                android:id="@+id/btnShowLocalList"
+                style="@style/SecondaryButton"
+                android:text="@string/button_show_local_list" />
 
-        <Button
-            android:id="@+id/btnShowRemoteList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:enabled="false"
-            android:padding="@dimen/dp_10"
-            android:text="@string/button_show_remote_list" />
+            <Button
+                android:id="@+id/btnClearLocalData"
+                style="@style/SecondaryButton"
+                android:text="@string/button_clear_local_list" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/btnSync"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:enabled="false"
-            android:padding="@dimen/dp_10"
-            android:text="@string/button_sync_now" />
+        <LinearLayout style="@style/Card">
 
-        <RelativeLayout
-            android:id="@+id/accountStatus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/dp_10">
+            <TextView
+                style="@style/SectionTitle"
+                android:text="@string/section_account" />
+
+            <Button
+                android:id="@+id/btnConnect"
+                style="@style/ActionButton"
+                android:text="@string/button_connect" />
 
             <TextView
                 android:id="@+id/status"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/dp_8"
                 android:enabled="false"
-                android:padding="@dimen/dp_10"
-                android:text="@string/text_status_unknown" />
+                android:text="@string/text_status_unknown"
+                android:textColor="@color/text_secondary" />
 
-            <CheckBox
-                android:id="@+id/cbIsSyncable"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/accountStatus"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_below="@id/status"
-                android:enabled="false"
-                android:text="@string/text_is_syncable" />
+                android:orientation="horizontal">
 
-            <CheckBox
-                android:id="@+id/cbAutoSync"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@id/status"
+                <CheckBox
+                    android:id="@+id/cbIsSyncable"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:text="@string/text_is_syncable" />
+
+                <CheckBox
+                    android:id="@+id/cbAutoSync"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:enabled="false"
+                    android:text="@string/text_auto_sync" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSync"
+                style="@style/ActionButton"
                 android:enabled="false"
-                android:text="@string/text_auto_sync" />
-        </RelativeLayout>
+                android:text="@string/button_sync_now" />
+
+            <Button
+                android:id="@+id/btnShowRemoteList"
+                style="@style/SecondaryButton"
+                android:enabled="false"
+                android:text="@string/button_show_remote_list" />
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
